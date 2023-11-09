@@ -1,17 +1,93 @@
 <html>
-    <head>
+    <head>              
          <title>Formulario</title>
     </head>
     <body>
         <form action="https://www.htmlquick.com/es/form-result.php" target="_blank">
-            
-            <p>Tu nombre: <input type="text" name="nombre"></p>
+            <fieldset>
+                <legend>Datos Personales:</legend>
+                <p>Tu nombre: <input type="text" name="nombre"></p>
 
             <p>Tu dirección de correo: <input type="email" name="correo"></p>
 
-            <p>Tu mensaje:<br>
-               <textarea name="mensaje"></textarea>
-            </p>
+            <p>Edad: <input type="number" name="edad" min="0" max="9999999">años</p>
+
+            <p>Fecha de nacimiento y hora: <input type="datetime-local" name="FechaHora"></p>
+
+            <p>Ingrese su número de tarjeta de débito: <input type="number" name="tarjeta"></p>
+            <p>Ingrese su CCV de su tarjeta: <input type="number" name="password" max="999"></p>
+
+            <p>Tu dirección: <input type="text" name="dirección"><br> Código postal: <input type="number" name="postal"></p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Gustos:</legend>
+                <p>Color favorito: <br><input type="color" name="favoColor"></p>
+
+            <p>Sitio web favorito: <input type="url" name="url"></p>
+
+            <p>Batería restante: 0%<input type="range" name="edad" min="1" max="100">100%</p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Selecciona los temas que te gusten:</legend>
+            <p>
+                <input type="checkbox" name="peliculas"> Estudiar<br>
+            
+                <input type="checkbox" name="deportes"> Deporte<br>
+            
+                <input type="checkbox" name="videojuegos"> Videojuegos
+              </p>
+            </fieldset>
+            
+              <fieldset>
+                <legend>Tiempo que dedicas a los estudios:</legend>
+              <p>
+                <input type="radio" name="tiempo" value="30min"> 30 min al día<br>
+            
+                <input type="radio" name="tiempo" value="1h"> 1 hora al día<br>
+            
+                <input type="radio" name="tiempo" value="+2h"> Más de 2 horas al día<br>
+
+                <input type="radio" name="tiempo" value="nada"> No estudio
+              </p>
+              </fieldset>
+
+              <fieldset>
+                <legend>Género:</legend>
+              <p>
+                <select name="genero">
+            
+                  <option>Masculino</option>
+            
+                  <option>Femenino</option>
+
+                  <option>No binario</option>
+
+                  <option>Elefante Telépata de guerra</option>
+            
+                  <option>Helicoptero apache de combate con doble ametralladora giratoria y lanzamisiles en batería
+                  </option>
+                </select>
+              </p>
+              </fieldset>
+
+             <fieldset>
+                <legend>Selecciona categorías:</legend>
+                <p>
+                    <select multiple name="categorias[]">
+                
+                      <option value="terror">Terror</option>
+                
+                      <option value="accion">Acción</option>
+                
+                      <option value="aventura">Aventura</option>
+                
+                      <option value="comedia">Comedia</option>
+                
+                    </select>
+                  </p>
+             </fieldset>
 
             <p>¿Quieres que te mandemos información por email?
                 <select name="envioEmail">
@@ -20,24 +96,17 @@
                 </select>
             </p>
 
-            <p>Ingrese su número de tarjeta de débito: <input type="number" name="tarjeta"></p>
-            <p>Ingrese su CCV de su tarjeta: <input type="number" name="password" max="999"></p>
+            <input type="file" name="archivo"><br>
 
-            <p>Tu dirección: <input type="text" name="dirección"><br> Código postal: <input type="number" name="postal"></p>
+            <p>Tu comentario:<br>
+                <textarea name="mensaje"></textarea>
+            </p>
 
-            <p>Color favorito: <br><input type="color" name="favoColor"></p>
-
-            <p>Fecha de nacimiento y hora: <input type="datetime-local" name="FechaHora"></p>
-
-            <p>Sitio web favorito: <input type="url" name="url"></p>
-
-            <p>Batería restante: 0%<input type="range" name="edad" min="1" max="100">100%</p>
-
-            <p>Edad: <input type="number" name="edad" min="0" max="9999999">años</p>
-
-            <input type="file" name="archivo">
-
-            <input type="submit" value="Enviar mensaje">
+            <br><br>
+            <input type="submit" value="Enviar mensaje"> <input type="reset" value="Reiniciar el formulario">
+            <br><br><br><br><br><br>
+            
         </form>
+        <small><h6>ATENCIÓN: Toda información rellenada en este formulario será puclicada en una web <strong>PÚBLICA</strong>.</h6></small>
     </body>
 </html>
